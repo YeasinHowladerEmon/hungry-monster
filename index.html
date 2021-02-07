@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h1>resturent</h1>
+    </div>
+    <div>
+       <center><input id="input-typ" type="text"><button id="src-btn">search</button></center>
+    </div>
+    <section>
+    <div class="row" id='meals'>
+      
+       </div>
+    </section>
+       <!-- <div class="col-md-3">
+        <div class="card" style="width: 18rem;">
+             <img src="..." class="card-img-top" alt="..."> 
+            <div class="card-body">
+              <p class="card-text"></p>
+            </div>
+          </div>
+    </div>
+    <div class="col-md-3">
+        <div class="card" style="width: 18rem;">
+            <img src="..." class="card-img-top" alt="...">
+            <div class="card-body">
+              <p class="card-text"></p>
+            </div>
+          </div>
+    </div>
+    <div class="col-md-3">
+        <div class="card" style="width: 18rem;">
+            <!-- <img src="..." class="card-img-top" alt="..."> 
+            <div class="card-body">
+              <p class="card-text"></p>
+            </div>
+          </div>
+    </div> -->
+    </div>
+    <script>
+        document.getElementById('src-btn').addEventListener('click', function(){
+            const inputValue = document.getElementById('input-typ').value;
+           mealDetail(inputValue)
+        })
+        function mealDetail(meal){
+        fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${meal}`)
+            .then(res => res.json())
+            .then(data =>  displayMeals(data.meals));
+            //console.log(data.meals)   
+        }
+        const displayMeals = meals =>{
+            const mealsDiv = document.getElementById('meals');
+          meals.forEach(meal => {
+            // console.log(meal.strMeal)
+               const mealDiv = document.createElement('div');
+             // mealDiv.className = 'meal';
+               const mealInfo = `
+                    
+                    <h3>${meal.strMeal}</h3>`;
+
+                    mealDiv.innerHtml= mealInfo;
+                    //mealsDiv.appendChild(mealDiv);
+           });
+              
+
+               
+           }
+           
+        
+
+    </script>
+</body>
+</html>

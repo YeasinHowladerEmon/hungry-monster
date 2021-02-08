@@ -1,0 +1,53 @@
+*{
+    background-color: blanchedalmond;
+}
+body{
+    background-color: blanchedalmond !important;
+}
+.card{
+    box-shadow: slategrey;
+    box-sizing: border-box;
+    border: none;
+}
+.card-img-top{
+    width: 250px;
+}
+#not-found {
+    font-size: 22px;
+    font-weight: 700;
+    color: red;
+}
+.container{
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+
+.form-control{
+    background-color:rgba(255, 255, 255, 0.2);
+    padding: 22px;
+    border: none;
+    border-radius: 25px;
+}
+.btn{
+    border-radius: 1.5rem;
+    padding: 9px 20px;
+}
+
+
+.navbar-toggler {
+    border: none;
+}
+.search-box{
+    position: relative;
+}
+.search-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+}
+
+
+
